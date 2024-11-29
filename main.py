@@ -31,8 +31,9 @@ class Example(QWidget):
         self.update()
 
     def draw_circles(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
         for i in range(50):
+            r, g, b = random.randrange(256), random.randrange(256), random.randrange(256)
+            qp.setBrush(QColor(r, g, b))
             x = random.randrange(200)
             y = random.randrange(200)
             r = random.randrange(25)
